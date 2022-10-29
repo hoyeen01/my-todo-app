@@ -1,0 +1,2 @@
+<p><%= todo_object.content %></p>
+<%= button_to "Delete", todo_list_todo_object_path(@todo_list, todo_object.id), method: :delete, data: { confirm: "Are you sure?" } %>

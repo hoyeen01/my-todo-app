@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+<p style="green"></p>
+<p>
+  <strong>Name:</strong>
+  <%= @todo_list.name %>
+</p>
+<p>
+  <strong>Status:</strong>
+  <%= @todo_list.status %>
+</p>
+<div id="todo_objects_wrapper">
+ <%= render @todo_list.todo_objects %>
+ <div id="form">
+  <%= render "todo_objects/form" %>
+ </div>
+</div>
+
+<div>
+  <%= link_to "Edit", edit_todo_list_path(@todo_list) %> |
+  <%= link_to "Back", todo_lists_path %>
+</div>
