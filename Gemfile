@@ -9,7 +9,9 @@ gem "rails", "~> 6.1.5"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
-gem 'net-smtp'
+gem 'net-smtp', require: false
+gem 'net-imap', require: false
+gem 'net-pop', require: false
 
 # Use sqlite3 as the database for Active Record
 gem 'pg', '~> 1.4', '>= 1.4.4'
