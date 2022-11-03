@@ -1,11 +1,17 @@
-<h1 class="todo_list_name">New todo list</h1>
 
-<div class="forms">
-<%= render "form", todo_list: @todo_list %>
+<div class="cont2">
+   <div class="card mb-5">
+      <div class="card-body">
+        <h1 class="text-center">New todo list</h1>
+      </div>
+    </div>
+      <p id="notice"><%= notice %></p>
+      
+
+   <div class="forms">
+    <%= render 'form', todo_list: @todo_list %>
+   </div>
+
+   <%= link_to "Back", todo_lists_path %>
 </div>
 
-<br>
-
-<div class="links">
-  <%= link_to "Back to todo lists", todo_lists_path %>
-</div>

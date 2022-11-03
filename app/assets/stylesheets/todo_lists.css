@@ -1,9 +1,9 @@
 body {
     background-color: lightgrey;
     height: 100vh;
-    margin-top: 20px;
+ }
+ 
+ .card-body {
+   background-color: rgb(102, 125, 148);
  }
 
- h1 {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
- }

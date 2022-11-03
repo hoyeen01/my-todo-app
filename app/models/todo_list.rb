@@ -1,5 +1,6 @@
 class TodoList < ApplicationRecord
-    has_many :todo_objects
+    belongs_to :user
+
     enum status: {
         pending: 0,
         done: 1,
