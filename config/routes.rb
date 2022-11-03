@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     post 'sign-in', to: 'auth#login', as: :login
     get 'sign-up', to: 'auth#sign_up', as: :sign_up
     post 'sign-up', to: 'auth#create_user', as: :create_user
-    post 'logout', to: 'auth#logout', as: :logout
+    get 'logout', to: 'auth#logout', as: :logout
   end
    # Defines the root path route ("/")
   root "pages#home"
