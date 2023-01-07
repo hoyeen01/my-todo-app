@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-    before_action :verify_auth,
+  before_action :verify_auth,
 
   def verify_auth
     @user = session[:user] ? User.find(session[:user]) : nil
