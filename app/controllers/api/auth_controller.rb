@@ -22,7 +22,7 @@ class Api::AuthController < ApiController
         if user.present?
           if user.authenticate(password)
             data = { id: user.id, first_name: user.first_name, last_name: user.last_name, email: user.email }
-            token = TokenService.generate_token(data, 30.seconds.from_now.to_i)
+            token = TokenService.generate_token(data, 30.minutes.from_now.to_i)
     
             render json: { message: 'login successful', data: { **data.except!(:exp), token: token } }
           else

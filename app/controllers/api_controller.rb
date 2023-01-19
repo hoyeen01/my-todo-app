@@ -38,8 +38,6 @@ class ApiController < ActionController::Base
       return render json: { message: 'No token in the header' }, status: :unauthorized if token.blank?
   
       user_data = TokenService.decode(token)
-      puts user_data
       @user = User.find(user_data.first['id'])
-      puts @user
     end
 end

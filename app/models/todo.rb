@@ -1,4 +1,4 @@
-class TodoList < ApplicationRecord
+class Todo < ApplicationRecord
     belongs_to :user
 
     enum status: {
