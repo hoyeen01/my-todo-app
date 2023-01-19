@@ -24,4 +24,7 @@ test:
 
 production:
   <<: *default
-  database: to_do_app_production
+  url: <%= ENV["PGDATABASE_URL"] %>
+  database: <%= ENV["PGDATABASE"] %>
+  username: <%= ENV["PGUSER"] %>
+  password: <%= ENV["PGPASSWORD"] %>
