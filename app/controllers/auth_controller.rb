@@ -14,7 +14,7 @@ class AuthController < ApplicationController
     if user.present?
       if user.authenticate(credentials[:password])
         session[:user] = user.id
-        redirect_to todo_lists_path
+        redirect_to todos_path
       else
         flash[:error] = 'Password is not correct'
         render "auth/sign_in"

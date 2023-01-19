@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_12_15_142830) do
+ActiveRecord::Schema.define(version: 2023_01_12_192718) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "todo_lists", force: :cascade do |t|
+  create_table "todos", force: :cascade do |t|
     t.string "name", null: false
     t.integer "status", default: 0
     t.datetime "created_at", precision: 6, null: false
@@ -33,5 +33,5 @@ ActiveRecord::Schema.define(version: 2022_12_15_142830) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
-  add_foreign_key "todo_lists", "users"
+  add_foreign_key "todos", "users"
 end

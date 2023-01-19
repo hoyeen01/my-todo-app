@@ -2,8 +2,8 @@
 
 one:
   content: MyString
-  todo_list: one
+  todo: one
 
 two:
   content: MyString
-  todo_list: two
+  todo: two

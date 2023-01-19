@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
 
   def requires_guest
     if @user_signed_in
-      redirect_to todo_lists_path
+      redirect_to todos_path
     end
   end
 end

@@ -2,16 +2,16 @@
 <div class="cont2">
    <div class="card mb-5">
       <div class="card-body">
-        <h1 class="text-center">New todo list</h1>
+        <h1 class="text-center">New todo </h1>
       </div>
     </div>
       <p id="notice"><%= notice %></p>
       
 
    <div class="forms">
-    <%= render 'form', todo_list: @todo_list %>
+    <%= render 'form', todo: @todo %>
    </div>
 
-   <%= link_to "Back", todo_lists_path %>
+   <%= link_to "Back", todos_path %>
 </div>
 

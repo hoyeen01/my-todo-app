@@ -1,9 +1,9 @@
 <div class="card">
   <div class="card-body">
-    <%= form_with(model: @todo_list, data: { turbo: false }) do |form| %>
-      <% if @todo_list.errors.any? %>
+    <%= form_with(model: @todo, data: { turbo: false }) do |form| %>
+      <% if @todo.errors.any? %>
         <ul>
-          <% @todo_list.errors.full_messages.each do |message| %>
+          <% @todo.errors.full_messages.each do |message| %>
             <li><%= message %></li>
           <% end %>
         </ul>
@@ -16,7 +16,7 @@
 
       <div class="mb-3">
         <%= form.label :status, 'Status:', class: 'form-label' %>
-        <%= form.select :status, TodoList.statuses.keys, {}, { class: 'form-select' }  %>
+        <%= form.select :status, Todo.statuses.keys, {}, { class: 'form-select' }  %>
       </div>
 
       <div class="d-grid gap-2 col-6 mx-auto">

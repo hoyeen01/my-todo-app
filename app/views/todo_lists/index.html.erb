@@ -5,7 +5,7 @@
       <div class="card-body">
         <h1 class="text-center"><%= @user.first_name %> - My Todo List</h1>
           <input type="text" id="myInput" placeholder="Title...">
-          <%= link_to('Create New Todo', new_todo_list_path, class: 'btn btn-secondary') %>
+          <%= link_to('Create New Todo', new_todo_path, class: 'btn btn-secondary') %>
       </div>
     </div>
       
@@ -22,14 +22,14 @@
              </thead>
 
              <tbody>
-               <% @todo_lists.each_with_index do |todo_list, index| %>
+               <% @todos.each_with_index do |todo, index| %>
                 <tr>
                    <td><%= index + 1 %></td>
-                   <td><%= todo_list.name %></td>
-                   <td><%= todo_list.status%></td>
-                   <td><%= link_to "Edit", edit_todo_list_path(todo_list) %></td>
-                   <td><%= link_to "Show", todo_list_path(todo_list) %></td>
-                   <td><%= link_to "Delete", todo_list_path(todo_list), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %></td>
+                   <td><%= todo.name %></td>
+                   <td><%= todo.status%></td>
+                   <td><%= link_to "Edit", edit_todo_path(todo) %></td>
+                   <td><%= link_to "Show", todo_path(todo) %></td>
+                   <td><%= link_to "Delete", todo_path(todo), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %></td>
                  </tr>
                <% end %>
              </tbody>

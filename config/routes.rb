@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :todo_lists 
-
+  resources :todos
+   
   scope :auth do 
     get 'sign-in', to: 'auth#sign_in', as: :sign_in
     post 'sign-in', to: 'auth#login', as: :login
@@ -14,16 +14,16 @@ Rails.application.routes.draw do
     post 'users', to: 'auth#register', as: :register
     post 'sign-in', to: 'auth#sign_in', as: :sign_in
 
-    resources :todo_lists,only: [:index, :create, :update, :destroy]
+    resources :todos,only: [:index, :create, :update, :destroy]
 
-   # get 'todolists', to: 'todolists#index', as: :api_todolists_path
-   # post 'todolists', to: 'todolists#create', as: :api_todolists_path
-   # put 'todolists/:id', to: 'todolists#update', as: :api_todolists_path
-   # patch 'todolists/:id', to: 'todolists#dupdate', as: :api_todolists_path
-   # destroy 'todolists/:id', to: 'todolists#destroy', as: :api_todolists_path
+   # get 'todos', to: 'todos#index', as: :api_todos_path
+   # post 'todos', to: 'todos#create', as: :api_todos_path
+   # put 'todos/:id', to: 'todos#update', as: :api_todos_path
+   # patch 'todos/:id', to: 'todos#dupdate', as: :api_todos_path
+   # destroy 'todos/:id', to: 'todos#destroy', as: :api_todos_path
 
 
   end
-   # Defines the root path route ("/")
-  root "pages#home"
+  # Defines the root path route ("/")
+  root 'pages#home'
 end

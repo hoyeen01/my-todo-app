@@ -12,7 +12,7 @@
       </ul>
       <div class="d-flex">
         <% if @user_signed_in %>
-          <%= link_to 'My Todos', todo_lists_path, class: 'btn btn-success me-3' %>
+          <%= link_to 'My Todos', todos_path, class: 'btn btn-success me-3' %>
           <%= link_to 'Logout', logout_path, class: 'btn btn-dark', method: :post %>
         <% else %>
           <%= link_to 'Sign In', sign_in_path, class: 'btn btn-success me-3' %>

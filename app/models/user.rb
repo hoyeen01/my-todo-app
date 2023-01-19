@@ -4,7 +4,7 @@ class User < ApplicationRecord
 
     has_secure_password
 
-    has_many :todo_lists, dependent: :destroy
+    has_many :todos, dependent: :destroy
 
     def full_name
         return "#{first_name} #{last_name}"
